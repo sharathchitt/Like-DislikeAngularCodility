@@ -17,7 +17,8 @@ export class LikeDislikeComponent implements OnInit {
   dislikes: number=25;
   likeStatus: boolean=false;
   dislikeStatus: boolean=false;
- 
+  likeFired: boolean=false;
+  dislikeFired: boolean=false;
 
   likeID:number=1;
   dislikeID:number=1;
@@ -27,6 +28,7 @@ export class LikeDislikeComponent implements OnInit {
     this.likeStatus=true;
     this.likes++;
     this.likeID=0;
+    this.likeFired=true;
     //this.likeClickedDec();
   }
 
@@ -44,6 +46,7 @@ export class LikeDislikeComponent implements OnInit {
     this.dislikeStatus=true;
     this.dislikes++;
     this.dislikeID=0;
+    this.dislikeFired=true;
   }
 
   dislikeClickedDec(){
