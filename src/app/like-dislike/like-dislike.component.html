@@ -30,14 +30,14 @@
 <button class="dislike-button" (click)="dislikeClicked()"
     *ngIf="dislikeID==1"
     [ngClass]="dislikeStatus ? 'disliked' : 'dislike-button'">
-    Like | <span class="likes-counter">{{dislikes}}</span>
+    Dislike | <span class="likes-counter">{{dislikes}}</span>
 </button>
 
 
 <button class="dislike-button" (click)="dislikeClickedDec()"
     *ngIf="dislikeID==0"
     [ngClass]="dislikeStatus ? 'disliked' : 'dislike-button'">
-    Like | <span class="likes-counter">{{dislikes}}</span>
+    Dislike | <span class="likes-counter">{{dislikes}}</span>
 </button>
 
 

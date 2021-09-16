@@ -17,7 +17,7 @@ export class LikeDislikeComponent implements OnInit {
   dislikes: number=25;
   likeStatus: boolean=false;
   dislikeStatus: boolean=false;
-  hiddenLike: boolean=false;
+ 
 
   likeID:number=1;
   dislikeID:number=1;
