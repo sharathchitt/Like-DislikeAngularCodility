@@ -1,34 +1,43 @@
 <p>like-dislike works!</p>
 
-<button class="like-button" (click)="likeClicked()"
+<!-- <button class="like-button" (click)="likeClicked()"
     ng-click="likes=likes-1"
+    *ngIf="likeID==1"
+    [ngClass]="likeStatus ? 'liked' : 'like-button'">
+    Like | <span class="likes-counter">{{likes}}</span>
+</button> -->
+
+<button class="like-button" (click)="likeClicked()"
     *ngIf="likeID==1"
     [ngClass]="likeStatus ? 'liked' : 'like-button'">
     Like | <span class="likes-counter">{{likes}}</span>
 </button>
 
 
-<!-- <button class="like-button" (click)="likeClickedDec()"
-    *ngIf="likeStatus"
-    [ngClass]="likeStatus ? 'like-button' : 'liked'">
+<button class="like-button" (click)="likeClickedDec()"
+    *ngIf="likeID==0"
+    [ngClass]="likeStatus ? 'liked' : 'like-button'">
     Like | <span class="likes-counter">{{likes}}</span>
-</button> -->
+</button>
 
 
 
-
-<!-- <div ng-controller="CounterController">
-    <button class="like-button" ng-click="likes=likes+1" 
-            ng-init="likes=100" 
-        [ngClass]="likeStatus ? 'liked' : 'like-button'">
-        Like | <span class="likes-counter">{{likes}}</span>
-    </button>
-</div> -->
-
-
-
-
-<button class="dislike-button" (click)="dislikeClicked()" 
+<!-- <button class="dislike-button" (click)="dislikeClicked()" 
     [ngClass]="dislikeStatus ? 'disliked' : 'dislike-button'">
     Dislike | <span class="dislikes-counter">{{ dislikes }}</span>
+</button> -->
+
+<button class="dislike-button" (click)="dislikeClicked()"
+    *ngIf="dislikeID==1"
+    [ngClass]="dislikeStatus ? 'disliked' : 'dislike-button'">
+    Like | <span class="likes-counter">{{dislikes}}</span>
 </button>
+
+
+<button class="dislike-button" (click)="dislikeClickedDec()"
+    *ngIf="dislikeID==0"
+    [ngClass]="dislikeStatus ? 'disliked' : 'dislike-button'">
+    Like | <span class="likes-counter">{{dislikes}}</span>
+</button>
+
+

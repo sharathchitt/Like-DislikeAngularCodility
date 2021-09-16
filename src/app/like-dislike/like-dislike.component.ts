@@ -13,35 +13,44 @@ export class LikeDislikeComponent implements OnInit {
   }
 
   count:number=0;
-    likes: number=100;
+  likes: number=100;
   dislikes: number=25;
   likeStatus: boolean=false;
   dislikeStatus: boolean=false;
   hiddenLike: boolean=false;
 
   likeID:number=1;
+  dislikeID:number=1;
 
   likeClicked(){
     this.likeID=1;
     this.likeStatus=true;
     this.likes++;
+    this.likeID=0;
     //this.likeClickedDec();
   }
 
   likeClickedDec(){
     this.likeID=0;
     this.likes--;
+    this.likeStatus=false;
+    this.likeID=1;
+    //this.likeClicked();
   }
 
-
-  declike(){
-    if(this.likeStatus)
-      this.likes--;
-  }
 
   dislikeClicked(){
+    this.dislikeID=1;
     this.dislikeStatus=true;
     this.dislikes++;
+    this.dislikeID=0;
+  }
+
+  dislikeClickedDec(){
+    this.dislikeID=0;
+    this.dislikeStatus=false;
+    this.dislikes--;
+    this.dislikeID=1;
   }
 
 
